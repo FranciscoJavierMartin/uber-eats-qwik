@@ -5,13 +5,7 @@ import styles from './styles.css?inline';
 
 export default component$(() => {
   useStyles$(styles);
-  return (
-    <>
-      <main>
-        <Slot />
-      </main>
-    </>
-  );
+  return <Slot />;
 });
 
 export const head: DocumentHead = {
