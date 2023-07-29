@@ -29,7 +29,7 @@ export default component$((props: TabsProps) => {
           </div>
         </div>
       ))}
-      <div />
+      <div class='border-swiper' />
     </div>
   );
 });
