@@ -2,23 +2,24 @@
   background-color: white;
   bottom: 0;
   display: flex;
-  height: 64px;
+  height: 56px;
   left: 0;
   position: fixed;
   width: 100%;
 
   .tab {
+    color: black;
+    cursor: pointer;
     display: grid;
     padding: 10px;
     place-items: center;
-    width: 100%;
-    cursor: pointer;
     text-decoration: none;
-    color: black;
+    width: 100%;
 
     &--active {
+      border-top: 3px solid red;
       color: red;
-      border-top: 5px solid red;
+      padding-top: 7px;
     }
 
     .icon {
