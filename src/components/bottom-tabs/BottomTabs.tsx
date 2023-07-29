@@ -2,6 +2,8 @@ import { component$ } from '@builder.io/qwik';
 import {
   HiHomeOutline,
   HiMagnifyingGlassOutline,
+  HiShoppingCartOutline,
+  HiUserCircleOutline,
 } from '@qwikest/icons/heroicons';
 import './BottomTabs.scss';
 import { useLocation } from '@builder.io/qwik-city';
@@ -21,6 +23,18 @@ export default component$(() => {
       icon: HiMagnifyingGlassOutline,
       title: 'Search',
       url: '/tabs/search',
+    },
+    {
+      id: 'cart',
+      icon: HiShoppingCartOutline,
+      title: 'Cart',
+      url: '/tabs/cart',
+    },
+    {
+      id: 'account',
+      icon: HiUserCircleOutline,
+      title: 'Account',
+      url: '/tabs/account',
     },
   ];
 
