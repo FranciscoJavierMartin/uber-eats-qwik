@@ -1,15 +1,25 @@
 .tabs {
-  position: fixed;
-  display: flex;
-  left: 0;
+  background-color: white;
   bottom: 0;
+  display: flex;
   height: 64px;
+  left: 0;
+  position: fixed;
   width: 100%;
 
   .tab {
-    width: 100%;
     display: grid;
+    padding: 10px;
     place-items: center;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    &--active {
+      color: red;
+      border-top: 5px solid red;
+    }
 
     .icon {
       font-size: 18px;
