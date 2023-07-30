@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import { useLocation } from '@builder.io/qwik-city';
 import {
   HiHomeOutline,
   HiMagnifyingGlassOutline,
@@ -6,7 +7,6 @@ import {
   HiUserCircleOutline,
 } from '@qwikest/icons/heroicons';
 import './BottomTabs.scss';
-import { useLocation } from '@builder.io/qwik-city';
 
 export default component$(() => {
   const location = useLocation();
