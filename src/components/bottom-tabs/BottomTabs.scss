@@ -1,5 +1,5 @@
 .tabs {
-  background-color: white;
+  background-color: var(--color-dark-contrast);
   bottom: 0;
   display: flex;
   height: 56px;
@@ -8,7 +8,7 @@
   width: 100%;
 
   .tab {
-    color: black;
+    color: var(--color-light-contrast);
     cursor: pointer;
     display: grid;
     padding: 10px;
@@ -17,8 +17,8 @@
     width: 100%;
 
     &--active {
-      border-top: 3px solid red;
-      color: red;
+      border-top: 3px solid var(--color-primary);
+      color: var(--color-primary);
       padding-top: 7px;
     }
 
