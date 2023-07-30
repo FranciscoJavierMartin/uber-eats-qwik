@@ -39,7 +39,7 @@ export default component$(() => {
   ];
 
   return (
-    <div class='tabs'>
+    <nav class='tabs'>
       {tabs.map((tab) => (
         <a
           key={tab.id}
@@ -55,6 +55,6 @@ export default component$(() => {
           <div class='title'>{tab.title}</div>
         </a>
       ))}
-    </div>
+    </nav>
   );
 });
