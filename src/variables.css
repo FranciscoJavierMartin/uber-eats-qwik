@@ -70,4 +70,6 @@
   --color-light-contrast-rgb: 0, 0, 0;
   --color-light-shade: #d7d8da;
   --color-light-tint: #f5f6f9;
+
+  --header-height: 56px;
 }
