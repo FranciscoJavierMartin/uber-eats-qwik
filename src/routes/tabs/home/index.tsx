@@ -3,7 +3,6 @@ import { component$ } from '@builder.io/qwik';
 export default component$(() => {
   return (
     <>
-      <h1>Home tab</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         deleniti amet esse quidem, explicabo laudantium obcaecati perspiciatis

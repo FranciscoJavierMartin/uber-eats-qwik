@@ -8,35 +8,35 @@ import {
 } from '@qwikest/icons/heroicons';
 import './BottomTabs.scss';
 
+const tabs = [
+  {
+    id: 'home',
+    icon: HiHomeOutline,
+    title: 'Home',
+    url: '/tabs/home',
+  },
+  {
+    id: 'search',
+    icon: HiMagnifyingGlassOutline,
+    title: 'Search',
+    url: '/tabs/search',
+  },
+  {
+    id: 'cart',
+    icon: HiShoppingCartOutline,
+    title: 'Cart',
+    url: '/tabs/cart',
+  },
+  {
+    id: 'account',
+    icon: HiUserCircleOutline,
+    title: 'Account',
+    url: '/tabs/account',
+  },
+];
+
 export default component$(() => {
   const location = useLocation();
-
-  const tabs = [
-    {
-      id: 'home',
-      icon: HiHomeOutline,
-      title: 'Home',
-      url: '/tabs/home',
-    },
-    {
-      id: 'search',
-      icon: HiMagnifyingGlassOutline,
-      title: 'Search',
-      url: '/tabs/search',
-    },
-    {
-      id: 'cart',
-      icon: HiShoppingCartOutline,
-      title: 'Cart',
-      url: '/tabs/cart',
-    },
-    {
-      id: 'account',
-      icon: HiUserCircleOutline,
-      title: 'Account',
-      url: '/tabs/account',
-    },
-  ];
 
   return (
     <nav class='tabs'>
