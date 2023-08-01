@@ -1,26 +1,26 @@
 .carousel {
   display: flex;
-  // padding: 100px;
-  overflow: auto;
-  height: 18rem;
-  scroll-snap-type: x mandatory;
+  gap: 20px;
   overflow-x: auto;
-  outline: 1px solid blue;
+  padding: 20px;
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 14rem;
-    height: 8rem;
-    border-radius: 0.28rem;
-    margin-right: 0.3rem;
-    transition: all 300ms ease;
-    cursor: pointer;
     scroll-snap-align: start;
-    outline: 1px solid red;
+    transition: all 300ms ease;
 
     &__poster {
-      border-radius: 0.28rem;
+      border-radius: 5px;
+      height: 20vh;
+      // TODO: Adjust width automatically
+      width: 305px;
     }
   }
 }
