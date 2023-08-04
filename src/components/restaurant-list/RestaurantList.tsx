@@ -1,11 +1,26 @@
 import { component$ } from '@builder.io/qwik';
-import './RestaurantList.scss';
-import image from '~/assets/imgs/1.jpg';
 import { HiStarMini } from '@qwikest/icons/heroicons';
+import './RestaurantList.scss';
+
+interface Restaurant {
+  cover: string;
+  name: string;
+  short_name: string;
+  cooking: string[];
+  rating: number;
+  delivery_time: number;
+  distance: number;
+  price: number;
+}
 
 interface RestaurantListProps {
   title: string;
   subtitle: string;
+  restaurants: Restaurant[];
+}
+
+function getCooking(styles: string[]): string {
+  return styles.join(', ');
 }
 
 export default component$((props: RestaurantListProps) => {
@@ -16,22 +31,32 @@ export default component$((props: RestaurantListProps) => {
         <p>{props.subtitle}</p>
       </div>
       <div class='list'>
-        <article class='restaurant'>
-          <img src={image} class='restaurant__cover' height={136} width={98} />
-          <div class='restaurant__data'>
-            <span class='restaurant__data__name'>Stayfit</span>
-            <p class='restaurant__data__cooking'>Italian, Mexican</p>
-            <div class='restaurant__data__data'>
-              <span>
-                <HiStarMini />5
-              </span>{' '}
-              . 25 mins . $100 for two
+        {props.restaurants.map((restaurant) => (
+          <article key={restaurant.short_name} class='restaurant'>
+            <img
+              src={restaurant.cover}
+              class='restaurant__cover'
+              height={136}
+              width={98}
+            />
+            <div class='restaurant__data'>
+              <span class='restaurant__data__name'>{restaurant.name}</span>
+              <p class='restaurant__data__cooking'>
+                {getCooking(restaurant.cooking)}
+              </p>
+              <div class='restaurant__data__data'>
+                <span>
+                  <HiStarMini />
+                  {restaurant.rating}
+                </span>
+                . {restaurant.delivery_time} mins . ${restaurant.price} for two
+              </div>
+              <div class='restaurant__data__distance'>
+                <p>{restaurant.distance} kms away</p>
+              </div>
             </div>
-            <div class='restaurant__data__distance'>
-              <p>2.5 kms away</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        ))}
       </div>
     </section>
   );
