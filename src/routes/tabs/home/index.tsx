@@ -6,7 +6,10 @@ export default component$(() => {
   return (
     <>
       <Banner />
-      <RestaurantList />
+      <RestaurantList
+        title='Restaurants nearby'
+        subtitle='Discover unique tastes close to you'
+      />
     </>
   );
 });
