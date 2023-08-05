@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export default component$((props: HeaderProps) => {
   return (
-    <header>
+    <header class='header'>
       <span class='title'>{props.title ?? 'No title'}</span>
       <HiChevronDownOutline />
     </header>
