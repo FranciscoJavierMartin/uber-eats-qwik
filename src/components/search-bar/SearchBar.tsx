@@ -26,7 +26,14 @@ export default component$(() => {
     <header class='header'>
       <HiMagnifyingGlassOutline />
       <input placeholder='Search' bind:value={query} />
-      <HiXMarkOutline />
+      <button
+        class='clear'
+        onClick$={() => {
+          query.value = '';
+        }}
+      >
+        <HiXMarkOutline />
+      </button>
     </header>
   );
 });
