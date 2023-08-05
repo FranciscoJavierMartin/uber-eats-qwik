@@ -32,7 +32,7 @@ export default component$(() => {
           query.value = '';
         }}
       >
-        <HiXMarkOutline />
+        {query.value && <HiXMarkOutline />}
       </button>
     </header>
   );
